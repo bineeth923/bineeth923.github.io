@@ -1,42 +1,1287 @@
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Bineeth  |  Designer Developer</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<style>
-		@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
-		body{
-			background: url('images/tic-tac-toe.png');
-			font-family: 'Roboto Condensed', sans-serif;
-			position: relative;
-			height: 95vh;
-		}
-		.content{
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			font-size: 40px;
-			text-align: center;
-		}
-		.footer{
-			position: absolute;
-			bottom: 0;
-			width: 99vw;
-			text-align: center;
-		}
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="AI-generated website">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="index, follow">
+      
+      <!-- Performance optimization: Preload critical resources -->
+      <script type="text/javascript" nonce="98c378ca91834394a88fa0dec8e" src="//local.adguard.org?ts=1733743235434&amp;type=content-script&amp;dmn=rollout.site&amp;url=https%3A%2F%2Frollout.site%2Fapi%2Fprojects%2Fbineeth-s-portfolirclk%2Fbuild&amp;app=com.google.Chrome&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-push&amp;st-loc&amp;st-java&amp;st-dnt"></script>
+<script type="text/javascript" nonce="98c378ca91834394a88fa0dec8e" src="//local.adguard.org?ts=1733743235434&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: {
+                  50: '#f0f9ff',
+                  100: '#e0f2fe',
+                  200: '#bae6fd',
+                  300: '#7dd3fc',
+                  400: '#38bdf8',
+                  500: '#0ea5e9',
+                  600: '#0284c7',
+                  700: '#0369a1',
+                  800: '#075985',
+                  900: '#0c4a6e',
+                  950: '#082f49',
+                },
+                secondary: {
+                  50: '#f0fdf4',
+                  100: '#dcfce7',
+                  200: '#bbf7d0',
+                  300: '#86efac',
+                  400: '#4ade80',
+                  500: '#22c55e',
+                  600: '#16a34a',
+                  700: '#15803d',
+                  800: '#166534',
+                  900: '#14532d',
+                  950: '#052e16',
+                },
+                accent: {
+                  50: '#faf5ff',
+                  100: '#f3e8ff',
+                  200: '#e9d5ff',
+                  300: '#d8b4fe',
+                  400: '#c084fc',
+                  500: '#a855f7',
+                  600: '#9333ea',
+                  700: '#7e22ce',
+                  800: '#6b21a8',
+                  900: '#581c87',
+                  950: '#3b0764',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
 
-	</style>
-</head>
-<body>
-	<div class="content">
-		<p>Thankyou for passing by.</p>
-		<p>But currently, this site is under construction.</p>
-	</div>
-	<div class="footer">
-		<p>All Rights reserved © 2018</p>
-	</div>
-</body>
-</html>
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Base Styles -->
+      <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 0px;
+          height: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+      <!-- Enhanced Image Handler -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
+
+          const loadImage = (img) => {
+            if ('loading' in HTMLImageElement.prototype) {
+              img.loading = 'lazy';
+            }
+            
+            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+            
+            img.onerror = () => {
+              const width = img.getAttribute('width') || img.clientWidth || 300;
+              const height = img.getAttribute('height') || img.clientHeight || 200;
+              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+              img.alt = 'Image unavailable';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100', 'error-image');
+            };
+
+            if (img.dataset.src) {
+              imageObserver.observe(img);
+            } else {
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+            }
+          };
+
+          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+          // Watch for dynamically added images
+          new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+              mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                  if (node.tagName === 'IMG') {
+                    loadImage(node);
+                  }
+                  node.querySelectorAll('img').forEach(loadImage);
+                }
+              });
+            });
+          }).observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+          // Create performance observer
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'largest-contentful-paint') {
+                // console.log(`LCP: ${entry.startTime}ms`);
+              }
+              if (entry.entryType === 'first-input') {
+                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+              }
+              if (entry.entryType === 'layout-shift') {
+                // console.log(`CLS: ${entry.value}`);
+              }
+            });
+          });
+
+          // Observe performance metrics
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+          // Log basic performance metrics
+          window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log({
+              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+              'TCP Connection': timing.connectEnd - timing.connectStart,
+              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+              'Page Load': timing.loadEventEnd - timing.navigationStart
+            });
+          });
+        }
+
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          console.log('Connection restored');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.add('offline');
+          console.log('Connection lost');
+        });
+      </script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- Offline notification -->
+      <div class="fixed bottom-4 right-4 transform translate-y-full opacity-0 transition-all duration-300 offline:translate-y-0 offline:opacity-100">
+        <div class="bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg">
+          You are currently offline
+        </div>
+      </div>
+   </body>
+</html><element id="ab060897-e776-4bed-8595-1fe7214e0227" data-section-id="ab060897-e776-4bed-8595-1fe7214e0227">
+
+<htmlCode>
+<div id="root">
+  <section id="navbar_hero" class="bg-gradient-to-br from-primary-100 to-primary-50 min-h-screen relative overflow-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 bg-white/90 backdrop-blur-sm shadow-sm z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <a href="#" class="text-2xl font-bold text-primary-600 font-heading">
+              Bineeth
+            </a>
+          </div>
+          
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="#about" class="text-gray-700 hover:text-primary-600 transition">About</a>
+            <a href="#experience" class="text-gray-700 hover:text-primary-600 transition">Experience</a>
+            <a href="#skills" class="text-gray-700 hover:text-primary-600 transition">Skills</a>
+            <a href="#contact" class="text-gray-700 hover:text-primary-600 transition">Contact</a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button type="button" class="p-2" x-data="{}" @click="document.querySelector('#mobile-menu').classList.toggle('hidden')">
+              <i class="fas fa-bars text-xl text-gray-600"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a href="#about" class="block px-3 py-2 text-gray-700 hover:bg-primary-50 rounded-md">About</a>
+          <a href="#experience" class="block px-3 py-2 text-gray-700 hover:bg-primary-50 rounded-md">Experience</a>
+          <a href="#skills" class="block px-3 py-2 text-gray-700 hover:bg-primary-50 rounded-md">Skills</a>
+          <a href="#contact" class="block px-3 py-2 text-gray-700 hover:bg-primary-50 rounded-md">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="text-center">
+        <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 font-heading animate-slide-up">
+          Hello, I'm Bineeth
+          <span class="block text-primary-600 mt-2">Software Engineer</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto animate-slide-up">
+          Crafting code, solving problems and driving innovation
+        </p>
+        <div class="flex justify-center space-x-4 mb-12 animate-slide-up">
+          <a href="#contact" class="px-8 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+            Get in Touch
+          </a>
+          <a href="#experience" class="px-8 py-3 bg-white text-primary-600 rounded-lg hover:bg-gray-50 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+            View Experience
+          </a>
+        </div>
+        
+        <!-- Social Links -->
+        <div class="flex justify-center space-x-6 animate-fade-in">
+          <a href="mailto:xxxx@gmail.com" class="text-gray-600 hover:text-primary-600 transition">
+            <i class="fas fa-envelope text-2xl"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-primary-600 transition">
+            <i class="fab fa-linkedin text-2xl"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-primary-600 transition">
+            <i class="fab fa-github text-2xl"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative Elements -->
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
+    <div class="absolute -bottom-8 -left-8 w-64 h-64 bg-primary-200 rounded-full filter blur-3xl opacity-50"></div>
+    <div class="absolute -top-8 -right-8 w-64 h-64 bg-secondary-200 rounded-full filter blur-3xl opacity-50"></div>
+  </section>
+</div>
+</htmlCode></element><element id="45874a18-2dcc-456e-a70a-8031b6e45ee8" data-section-id="45874a18-2dcc-456e-a70a-8031b6e45ee8">
+
+<htmlCode>
+<div id="root">
+  <section id="about" class="py-20 bg-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Fun Title -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 font-heading">
+          About Me 
+          <span class="block text-primary-600 text-lg mt-2">
+            (Warning: Contains traces of caffeine and bad jokes)
+          </span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- About Content -->
+        <div class="space-y-6 animate-slide-right">
+          <div class="bg-gradient-to-r from-primary-50 to-secondary-50 p-6 rounded-xl">
+            <h3 class="text-xl font-semibold mb-3 flex items-center">
+              <i class="fas fa-code text-primary-600 mr-2"></i>
+              Code Whisperer
+            </h3>
+            <p class="text-gray-700">
+              I turn coffee into code and bugs into features. Currently crafting digital solutions at OpenEnvoy, where I make workflows flow and databases sing.
+            </p>
+          </div>
+
+          <div class="bg-gradient-to-r from-secondary-50 to-accent-50 p-6 rounded-xl">
+            <h3 class="text-xl font-semibold mb-3 flex items-center">
+              <i class="fas fa-robot text-secondary-600 mr-2"></i>
+              AI Enthusiast
+            </h3>
+            <p class="text-gray-700">
+              I build chatbots that are smarter than your average conversation partner (no offense to humans). They don't just chat - they visualize, analyze, and occasionally tell dad jokes.
+            </p>
+          </div>
+
+          <div class="bg-gradient-to-r from-accent-50 to-primary-50 p-6 rounded-xl">
+            <h3 class="text-xl font-semibold mb-3 flex items-center">
+              <i class="fas fa-lightbulb text-accent-600 mr-2"></i>
+              Problem Solver
+            </h3>
+            <p class="text-gray-700">
+              Whether it's optimizing search times to lightning speed or making ERPs play nice together, I love turning complex challenges into elegant solutions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Fun Facts Card -->
+        <div class="bg-white rounded-2xl shadow-xl p-8 animate-slide-left">
+          <h3 class="text-2xl font-semibold mb-6 text-gray-900">Fun Facts.exe</h3>
+          
+          <div class="space-y-4">
+            <div class="flex items-start space-x-3">
+              <i class="fas fa-coffee text-primary-600 mt-1"></i>
+              <p class="text-gray-700">Average code-to-coffee ratio: 500 lines per cup</p>
+            </div>
+            
+            <div class="flex items-start space-x-3">
+              <i class="fas fa-clock text-secondary-600 mt-1"></i>
+              <p class="text-gray-700">Reduced ERP integration time from "eventually" to "next week"</p>
+            </div>
+            
+            <div class="flex items-start space-x-3">
+              <i class="fas fa-bolt text-accent-600 mt-1"></i>
+              <p class="text-gray-700">Made search so fast, results appear before you finish typing</p>
+            </div>
+
+            <div class="flex items-start space-x-3">
+              <i class="fas fa-heart text-red-500 mt-1"></i>
+              <p class="text-gray-700">Passionate about clean code (and clean coffee mugs)</p>
+            </div>
+          </div>
+
+          <!-- Tech Stack Pills -->
+          <div class="mt-8">
+            <h4 class="text-sm font-semibold text-gray-500 mb-3">Current Tech Stack:</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm">Python</span>
+              <span class="px-3 py-1 bg-secondary-100 text-secondary-700 rounded-full text-sm">NodeJS</span>
+              <span class="px-3 py-1 bg-accent-100 text-accent-700 rounded-full text-sm">AWS</span>
+              <span class="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm">React</span>
+              <span class="px-3 py-1 bg-secondary-100 text-secondary-700 rounded-full text-sm">FastAPI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative Elements -->
+    <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-gradient-to-br from-primary-200 to-secondary-200 rounded-full opacity-20 blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-to-tr from-accent-200 to-primary-200 rounded-full opacity-20 blur-3xl"></div>
+  </section>
+</div>
+</htmlCode></element><element id="498f1403-2026-4555-b16e-bd081e7aeaeb" data-section-id="498f1403-2026-4555-b16e-bd081e7aeaeb">
+
+<htmlCode>
+<div id="root">
+  <section id="experience" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 font-heading">
+          Experience
+          <span class="block text-primary-600 text-lg mt-2">
+            (A journey through the tech multiverse)
+          </span>
+        </h2>
+      </div>
+
+      <div class="relative">
+        <!-- Timeline Line -->
+        <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-primary-500 via-secondary-500 to-accent-500"></div>
+
+        <!-- Experience Items -->
+        <div class="space-y-16">
+          <!-- OpenEnvoy -->
+          <div class="relative group">
+            <div class="md:grid md:grid-cols-2 md:gap-8 items-center group-hover:opacity-100 transition-opacity">
+              <div class="md:text-right md:pr-8 mb-8 md:mb-0">
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
+                  <h3 class="text-xl font-semibold text-primary-600 mb-2">OpenEnvoy</h3>
+                  <p class="text-gray-600 text-sm mb-2">Senior Software Engineer • FEB 2023 - Present</p>
+                  <div class="space-y-3">
+                    <div class="flex items-center md:flex-row-reverse gap-2">
+                      <i class="fas fa-wand-magic-sparkles text-secondary-500"></i>
+                      <p class="text-gray-700">Built workflow automation that's smoother than a barista's latte art</p>
+                    </div>
+                    <div class="flex items-center md:flex-row-reverse gap-2">
+                      <i class="fas fa-bolt text-secondary-500"></i>
+                      <p class="text-gray-700">Made search faster than finding your coffee mug in the morning</p>
+                    </div>
+                    <div class="flex items-center md:flex-row-reverse gap-2">
+                      <i class="fas fa-robot text-secondary-500"></i>
+                      <p class="text-gray-700">Created an AI chatbot that's actually helpful (and occasionally funny)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hidden md:block"></div>
+            </div>
+          </div>
+
+          <!-- Aviyel -->
+          <div class="relative group">
+            <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+              <div class="hidden md:block"></div>
+              <div class="md:pl-8 mb-8 md:mb-0">
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
+                  <h3 class="text-xl font-semibold text-secondary-600 mb-2">Aviyel</h3>
+                  <p class="text-gray-600 text-sm mb-2">Senior Software Engineer • MAY 2021 - JAN 2023</p>
+                  <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                      <i class="fas fa-database text-primary-500"></i>
+                      <p class="text-gray-700">Built data pipelines that make spaghetti code look organized</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <i class="fas fa-users text-primary-500"></i>
+                      <p class="text-gray-700">Merged user profiles like a digital matchmaker</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <i class="fas fa-calendar text-primary-500"></i>
+                      <p class="text-gray-700">Created an events platform that's actually fun to use</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Paytm -->
+          <div class="relative group">
+            <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+              <div class="md:text-right md:pr-8 mb-8 md:mb-0">
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
+                  <h3 class="text-xl font-semibold text-accent-600 mb-2">Paytm</h3>
+                  <p class="text-gray-600 text-sm mb-2">Software Engineer • OCT 2018 - APR 2021</p>
+                  <div class="space-y-3">
+                    <div class="flex items-center md:flex-row-reverse gap-2">
+                      <i class="fas fa-shopping-cart text-accent-500"></i>
+                      <p class="text-gray-700">Managed catalogs bigger than my Netflix watchlist</p>
+                    </div>
+                    <div class="flex items-center md:flex-row-reverse gap-2">
+                      <i class="fas fa-bus text-accent-500"></i>
+                      <p class="text-gray-700">Made bus bookings as smooth as a luxury ride</p>
+                    </div>
+                    <div class="flex items-center md:flex-row-reverse gap-2">
+                      <i class="fas fa-graduation-cap text-accent-500"></i>
+                      <p class="text-gray-700">Created interview guides that don't cause panic attacks</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hidden md:block"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Tech Stack Footer -->
+      <div class="mt-16 text-center">
+        <div class="inline-flex flex-wrap justify-center gap-3 bg-white px-6 py-4 rounded-xl shadow-md">
+          <span class="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm">Python</span>
+          <span class="px-3 py-1 bg-secondary-100 text-secondary-700 rounded-full text-sm">NodeJS</span>
+          <span class="px-3 py-1 bg-accent-100 text-accent-700 rounded-full text-sm">AWS</span>
+          <span class="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm">React</span>
+          <span class="px-3 py-1 bg-secondary-100 text-secondary-700 rounded-full text-sm">FastAPI</span>
+          <span class="px-3 py-1 bg-accent-100 text-accent-700 rounded-full text-sm">GCP</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="095d9cfb-b602-47a0-81c1-5912a7515d5a" data-section-id="095d9cfb-b602-47a0-81c1-5912a7515d5a">
+
+<htmlCode>
+<div id="root">
+  <section id="skills" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 font-heading">
+          Tech Powers & Abilities
+          <span class="block text-primary-600 text-lg mt-2">
+            (No radioactive spider bites required)
+          </span>
+        </h2>
+      </div>
+
+      <!-- Skills Grid -->
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Frontend Skills -->
+        <div class="bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl p-6 shadow-lg transform hover:-translate-y-1 transition duration-300">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-laptop-code text-2xl text-primary-600 mr-3"></i>
+            <h3 class="text-xl font-semibold text-gray-900">Frontend Wizardry</h3>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700">React & React Native</span>
+              <div class="flex space-x-1">
+                <i class="fas fa-star text-primary-500"></i>
+                <i class="fas fa-star text-primary-500"></i>
+                <i class="fas fa-star text-primary-500"></i>
+                <i class="fas fa-star text-primary-500"></i>
+                <i class="fas fa-star text-primary-500"></i>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700">JavaScript</span>
+              <div class="flex space-x-1">
+                <i class="fas fa-star text-primary-500"></i>
+                <i class="fas fa-star text-primary-500"></i>
+                <i class="fas fa-star text-primary-500"></i>
+                <i class="fas fa-star text-primary-500"></i>
+                <i class="fas fa-star-half-alt text-primary-500"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend Skills -->
+        <div class="bg-gradient-to-br from-secondary-50 to-secondary-100 rounded-2xl p-6 shadow-lg transform hover:-translate-y-1 transition duration-300">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-server text-2xl text-secondary-600 mr-3"></i>
+            <h3 class="text-xl font-semibold text-gray-900">Backend Sorcery</h3>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700">Python & FastAPI</span>
+              <div class="flex space-x-1">
+                <i class="fas fa-star text-secondary-500"></i>
+                <i class="fas fa-star text-secondary-500"></i>
+                <i class="fas fa-star text-secondary-500"></i>
+                <i class="fas fa-star text-secondary-500"></i>
+                <i class="fas fa-star text-secondary-500"></i>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700">Node.js</span>
+              <div class="flex space-x-1">
+                <i class="fas fa-star text-secondary-500"></i>
+                <i class="fas fa-star text-secondary-500"></i>
+                <i class="fas fa-star text-secondary-500"></i>
+                <i class="fas fa-star text-secondary-500"></i>
+                <i class="fas fa-star-half-alt text-secondary-500"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cloud & DevOps -->
+        <div class="bg-gradient-to-br from-accent-50 to-accent-100 rounded-2xl p-6 shadow-lg transform hover:-translate-y-1 transition duration-300">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-cloud text-2xl text-accent-600 mr-3"></i>
+            <h3 class="text-xl font-semibold text-gray-900">Cloud Magic</h3>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700">AWS</span>
+              <div class="flex space-x-1">
+                <i class="fas fa-star text-accent-500"></i>
+                <i class="fas fa-star text-accent-500"></i>
+                <i class="fas fa-star text-accent-500"></i>
+                <i class="fas fa-star text-accent-500"></i>
+                <i class="fas fa-star text-accent-500"></i>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700">GCP</span>
+              <div class="flex space-x-1">
+                <i class="fas fa-star text-accent-500"></i>
+                <i class="fas fa-star text-accent-500"></i>
+                <i class="fas fa-star text-accent-500"></i>
+                <i class="fas fa-star text-accent-500"></i>
+                <i class="far fa-star text-accent-500"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Database Expertise -->
+        <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-6 shadow-lg transform hover:-translate-y-1 transition duration-300">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-database text-2xl text-primary-600 mr-3"></i>
+            <h3 class="text-xl font-semibold text-gray-900">Database Whispering</h3>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700">MySQL & Redis</span>
+              <div class="flex space-x-1">
+                <i class="fas fa-star text-primary-500"></i>
+                <i class="fas fa-star text-primary-500"></i>
+                <i class="fas fa-star text-primary-500"></i>
+                <i class="fas fa-star text-primary-500"></i>
+                <i class="fas fa-star-half-alt text-primary-500"></i>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700">Redshift & Cassandra</span>
+              <div class="flex space-x-1">
+                <i class="fas fa-star text-primary-500"></i>
+                <i class="fas fa-star text-primary-500"></i>
+                <i class="fas fa-star text-primary-500"></i>
+                <i class="fas fa-star text-primary-500"></i>
+                <i class="far fa-star text-primary-500"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools & Practices -->
+        <div class="bg-gradient-to-br from-secondary-50 to-accent-50 rounded-2xl p-6 shadow-lg transform hover:-translate-y-1 transition duration-300">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-tools text-2xl text-secondary-600 mr-3"></i>
+            <h3 class="text-xl font-semibold text-gray-900">Tools & Practices</h3>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700">Git & Version Control</span>
+              <div class="flex space-x-1">
+                <i class="fas fa-star text-secondary-500"></i>
+                <i class="fas fa-star text-secondary-500"></i>
+                <i class="fas fa-star text-secondary-500"></i>
+                <i class="fas fa-star text-secondary-500"></i>
+                <i class="fas fa-star text-secondary-500"></i>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700">Agile Methodology</span>
+              <div class="flex space-x-1">
+                <i class="fas fa-star text-secondary-500"></i>
+                <i class="fas fa-star text-secondary-500"></i>
+                <i class="fas fa-star text-secondary-500"></i>
+                <i class="fas fa-star text-secondary-500"></i>
+                <i class="far fa-star text-secondary-500"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Special Powers -->
+        <div class="bg-gradient-to-br from-accent-50 to-primary-50 rounded-2xl p-6 shadow-lg transform hover:-translate-y-1 transition duration-300">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-magic text-2xl text-accent-600 mr-3"></i>
+            <h3 class="text-xl font-semibold text-gray-900">Special Powers</h3>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700">Debug Dancing</span>
+              <div class="flex space-x-1">
+                <i class="fas fa-star text-accent-500"></i>
+                <i class="fas fa-star text-accent-500"></i>
+                <i class="fas fa-star text-accent-500"></i>
+                <i class="fas fa-star text-accent-500"></i>
+                <i class="fas fa-star-half-alt text-accent-500"></i>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700">Coffee to Code Conversion</span>
+              <div class="flex space-x-1">
+                <i class="fas fa-star text-accent-500"></i>
+                <i class="fas fa-star text-accent-500"></i>
+                <i class="fas fa-star text-accent-500"></i>
+                <i class="fas fa-star text-accent-500"></i>
+                <i class="fas fa-star text-accent-500"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="337c0427-5429-4aaa-9875-41d1914c561d" data-section-id="337c0427-5429-4aaa-9875-41d1914c561d">
+
+<htmlCode>
+<div id="root">
+  <section id="projects" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 font-heading">
+          Code Adventures
+          <span class="block text-primary-600 text-lg mt-2">
+            (Where bugs fear to tread)
+          </span>
+        </h2>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- AI Chatbot -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 overflow-hidden group">
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-robot text-3xl text-primary-600 mr-4"></i>
+              <h3 class="text-xl font-semibold text-gray-900">The Friendly Neighborhood AI</h3>
+            </div>
+            <p class="text-gray-600 mb-4">Built an AI chatbot that's actually helpful (and tells better jokes than your dad)</p>
+            <div class="space-y-2">
+              <div class="flex items-center text-sm">
+                <i class="fas fa-check text-secondary-500 mr-2"></i>
+                <span class="text-gray-700">Custom visualizations that make data look good</span>
+              </div>
+              <div class="flex items-center text-sm">
+                <i class="fas fa-check text-secondary-500 mr-2"></i>
+                <span class="text-gray-700">Reduced support queries by being actually helpful</span>
+              </div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm">Python</span>
+              <span class="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm">AWS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ERP Integration Platform -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 overflow-hidden group">
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-plug text-3xl text-secondary-600 mr-4"></i>
+              <h3 class="text-xl font-semibold text-gray-900">The ERP Whisperer</h3>
+            </div>
+            <p class="text-gray-600 mb-4">Made ERPs play nice together (like getting cats and dogs to have a tea party)</p>
+            <div class="space-y-2">
+              <div class="flex items-center text-sm">
+                <i class="fas fa-check text-secondary-500 mr-2"></i>
+                <span class="text-gray-700">Cut integration time from "eventually" to "next week"</span>
+              </div>
+              <div class="flex items-center text-sm">
+                <i class="fas fa-check text-secondary-500 mr-2"></i>
+                <span class="text-gray-700">Unified framework for all your ERP dreams</span>
+              </div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-secondary-100 text-secondary-700 rounded-full text-sm">Node.js</span>
+              <span class="px-3 py-1 bg-secondary-100 text-secondary-700 rounded-full text-sm">AWS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data Pipeline -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 overflow-hidden group">
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-database text-3xl text-accent-600 mr-4"></i>
+              <h3 class="text-xl font-semibold text-gray-900">The Data Wrangler</h3>
+            </div>
+            <p class="text-gray-600 mb-4">Built pipelines that make spaghetti code look organized (and taste better)</p>
+            <div class="space-y-2">
+              <div class="flex items-center text-sm">
+                <i class="fas fa-check text-accent-500 mr-2"></i>
+                <span class="text-gray-700">Multi-platform data scraping without the scrapes</span>
+              </div>
+              <div class="flex items-center text-sm">
+                <i class="fas fa-check text-accent-500 mr-2"></i>
+                <span class="text-gray-700">Faster than a caffeinated developer on a deadline</span>
+              </div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-accent-100 text-accent-700 rounded-full text-sm">GoLang</span>
+              <span class="px-3 py-1 bg-accent-100 text-accent-700 rounded-full text-sm">ClickHouse</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Events Platform -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 overflow-hidden group">
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-calendar-alt text-3xl text-primary-600 mr-4"></i>
+              <h3 class="text-xl font-semibold text-gray-900">The Event Horizon</h3>
+            </div>
+            <p class="text-gray-600 mb-4">Created events that people actually want to attend (no boring meetings allowed)</p>
+            <div class="space-y-2">
+              <div class="flex items-center text-sm">
+                <i class="fas fa-check text-primary-500 mr-2"></i>
+                <span class="text-gray-700">Real-time chat that's actually real-time</span>
+              </div>
+              <div class="flex items-center text-sm">
+                <i class="fas fa-check text-primary-500 mr-2"></i>
+                <span class="text-gray-700">Analytics that tell you more than "people showed up"</span>
+              </div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm">Python</span>
+              <span class="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm">FastAPI</span>
+              <span class="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm">PubNub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GitHub Stats -->
+      <div class="mt-16 text-center">
+        <a href="#" class="inline-block bg-white px-8 py-4 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
+          <div class="flex items-center space-x-3">
+            <i class="fab fa-github text-2xl text-gray-700"></i>
+            <span class="text-gray-700 font-medium">More projects on GitHub</span>
+            <i class="fas fa-arrow-right text-primary-600"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="e40cb151-dcc4-4781-97a3-3d598fac7a1f" data-section-id="e40cb151-dcc4-4781-97a3-3d598fac7a1f">
+
+<htmlCode>
+<div id="root">
+  <section id="fun_facts" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 font-heading">
+          The Lighter Side
+          <span class="block text-primary-600 text-lg mt-2">
+            (Where code meets comedy)
+          </span>
+        </h2>
+      </div>
+
+      <!-- Fun Facts Grid -->
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Coding Stats -->
+        <div class="bg-white rounded-xl shadow-lg p-6 transform hover:-translate-y-2 transition duration-300">
+          <div class="text-center">
+            <i class="fas fa-keyboard text-5xl text-primary-500 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-4">Code Counter</h3>
+            <div class="space-y-2">
+              <p class="text-4xl font-bold text-primary-600">∞</p>
+              <p class="text-gray-600">Lines of code written</p>
+              <p class="text-sm text-gray-500 italic">(Give or take a few semicolons)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coffee Stats -->
+        <div class="bg-white rounded-xl shadow-lg p-6 transform hover:-translate-y-2 transition duration-300">
+          <div class="text-center">
+            <i class="fas fa-coffee text-5xl text-secondary-500 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-4">Coffee-to-Code Ratio</h3>
+            <div class="space-y-2">
+              <p class="text-4xl font-bold text-secondary-600">☕️++</p>
+              <p class="text-gray-600">Cups per feature</p>
+              <p class="text-sm text-gray-500 italic">(Caffeine-driven development)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bug Stats -->
+        <div class="bg-white rounded-xl shadow-lg p-6 transform hover:-translate-y-2 transition duration-300">
+          <div class="text-center">
+            <i class="fas fa-bug text-5xl text-accent-500 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-4">Bug Bounty</h3>
+            <div class="space-y-2">
+              <p class="text-4xl font-bold text-accent-600">404</p>
+              <p class="text-gray-600">Bugs converted to features</p>
+              <p class="text-sm text-gray-500 italic">(It's not a bug, it's a feature!)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Achievement Cards -->
+        <div class="bg-white rounded-xl shadow-lg p-6 transform hover:-translate-y-2 transition duration-300">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-trophy text-yellow-500 text-2xl mr-3"></i>
+            <h3 class="text-xl font-semibold">Achievement Unlocked</h3>
+          </div>
+          <p class="text-gray-600 mb-2">"The Debugger Whisperer"</p>
+          <p class="text-sm text-gray-500 italic">For finding bugs in code that doesn't exist yet</p>
+        </div>
+
+        <!-- Sleep Schedule -->
+        <div class="bg-white rounded-xl shadow-lg p-6 transform hover:-translate-y-2 transition duration-300">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-moon text-indigo-500 text-2xl mr-3"></i>
+            <h3 class="text-xl font-semibold">Sleep Schedule</h3>
+          </div>
+          <p class="text-gray-600 mb-2">while(awake) { code(); }</p>
+          <p class="text-sm text-gray-500 italic">The infinite loop of a developer's life</p>
+        </div>
+
+        <!-- Project Naming -->
+        <div class="bg-white rounded-xl shadow-lg p-6 transform hover:-translate-y-2 transition duration-300">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-file-code text-primary-500 text-2xl mr-3"></i>
+            <h3 class="text-xl font-semibold">Project Naming Strategy</h3>
+          </div>
+          <p class="text-gray-600 mb-2">project_final_v2_FINAL_really_final.js</p>
+          <p class="text-sm text-gray-500 italic">Version control at its finest</p>
+        </div>
+      </div>
+
+      <!-- Fun Quote -->
+      <div class="mt-16 text-center">
+        <div class="inline-block bg-white px-8 py-6 rounded-xl shadow-md">
+          <p class="text-xl text-gray-700 italic">
+            "In code we trust, but in coffee we must"
+          </p>
+          <p class="text-sm text-gray-500 mt-2">- Every developer ever</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="89689502-4a3e-497b-aacc-e6f54065ec99" data-section-id="89689502-4a3e-497b-aacc-e6f54065ec99">
+
+<htmlCode>
+<div id="root">
+  <section id="contact" class="py-20 bg-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 font-heading">
+          Let's Connect!
+          <span class="block text-primary-600 text-lg mt-2">
+            (I promise to reply faster than my code compiles)
+          </span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Contact Info -->
+        <div class="space-y-8">
+          <div class="text-center md:text-left">
+            <h3 class="text-2xl font-semibold mb-4">Ready to create some tech magic?</h3>
+            <p class="text-gray-600">Let's build something awesome together! I'm always up for interesting projects and coffee chats ☕</p>
+          </div>
+
+          <div class="space-y-4">
+            <!-- Email -->
+            <a href="mailto:xxxx@gmail.com" class="flex items-center p-4 bg-primary-50 rounded-xl hover:bg-primary-100 transition transform hover:-translate-y-1">
+              <div class="bg-primary-500 rounded-lg p-3">
+                <i class="fas fa-envelope text-xl text-white"></i>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-lg font-semibold text-gray-900">Email</h4>
+                <p class="text-gray-600">xxxx@gmail.com</p>
+              </div>
+              <i class="fas fa-arrow-right ml-auto text-primary-500"></i>
+            </a>
+
+            <!-- Phone -->
+            <a href="tel:+91xxxxxxx" class="flex items-center p-4 bg-secondary-50 rounded-xl hover:bg-secondary-100 transition transform hover:-translate-y-1">
+              <div class="bg-secondary-500 rounded-lg p-3">
+                <i class="fas fa-phone text-xl text-white"></i>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-lg font-semibold text-gray-900">Phone</h4>
+                <p class="text-gray-600">(91) xxxxxxx</p>
+              </div>
+              <i class="fas fa-arrow-right ml-auto text-secondary-500"></i>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="#" class="flex items-center p-4 bg-accent-50 rounded-xl hover:bg-accent-100 transition transform hover:-translate-y-1">
+              <div class="bg-accent-500 rounded-lg p-3">
+                <i class="fab fa-linkedin-in text-xl text-white"></i>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-lg font-semibold text-gray-900">LinkedIn</h4>
+                <p class="text-gray-600">Let's connect professionally</p>
+              </div>
+              <i class="fas fa-arrow-right ml-auto text-accent-500"></i>
+            </a>
+          </div>
+
+          <!-- Availability Note -->
+          <div class="bg-gray-50 p-4 rounded-xl">
+            <p class="text-gray-600 text-sm">
+              <i class="fas fa-clock text-primary-500 mr-2"></i>
+              Current Response Time: As fast as my coffee kicks in ⚡
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="bg-gray-50 rounded-2xl p-8 shadow-lg">
+          <form class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+              <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition" placeholder="John Doe">
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+              <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition" placeholder="john@example.com">
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+              <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition" placeholder="Tell me about your awesome project!"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-primary-600 text-white py-3 px-6 rounded-lg hover:bg-primary-700 transition transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+              Send Message <i class="fas fa-paper-plane ml-2"></i>
+            </button>
+
+            <p class="text-center text-sm text-gray-500">
+              <i class="fas fa-shield-alt mr-1"></i>
+              Your data is secure and never shared with third parties
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative Elements -->
+    <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-gradient-to-br from-primary-200 to-secondary-200 rounded-full opacity-20 blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-to-tr from-accent-200 to-primary-200 rounded-full opacity-20 blur-3xl"></div>
+  </section>
+</div>
+</htmlCode></element><element id="56337a67-999b-4d75-ba3e-3199c8d01e77" data-section-id="56337a67-999b-4d75-ba3e-3199c8d01e77">
+
+<htmlCode>
+<div id="root">
+  <footer id="footer" class="bg-gray-50 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Main Footer Content -->
+      <div class="grid md:grid-cols-2 gap-12 mb-12">
+        <!-- Left Side -->
+        <div class="space-y-6">
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-code text-2xl text-primary-600"></i>
+            <h2 class="text-2xl font-bold text-gray-900 font-heading">Bineeth</h2>
+          </div>
+          <p class="text-gray-600 max-w-md">
+            Building digital solutions with a perfect blend of code and coffee. Always up for new challenges and interesting conversations!
+          </p>
+          <div class="space-x-4">
+            <a href="mailto:xxxx@gmail.com" class="inline-block text-gray-600 hover:text-primary-600 transition">
+              <i class="fas fa-envelope text-xl"></i>
+            </a>
+            <a href="#" class="inline-block text-gray-600 hover:text-primary-600 transition">
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+            <a href="#" class="inline-block text-gray-600 hover:text-primary-600 transition">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="grid grid-cols-2 gap-8">
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#about" class="text-gray-600 hover:text-primary-600 transition">About</a>
+              </li>
+              <li>
+                <a href="#experience" class="text-gray-600 hover:text-primary-600 transition">Experience</a>
+              </li>
+              <li>
+                <a href="#skills" class="text-gray-600 hover:text-primary-600 transition">Skills</a>
+              </li>
+              <li>
+                <a href="#projects" class="text-gray-600 hover:text-primary-600 transition">Projects</a>
+              </li>
+              <li>
+                <a href="#contact" class="text-gray-600 hover:text-primary-600 transition">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Tech Stack -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-4">Tech Stack</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-primary-100 text-primary-700 rounded-full text-xs">Python</span>
+              <span class="px-2 py-1 bg-secondary-100 text-secondary-700 rounded-full text-xs">NodeJS</span>
+              <span class="px-2 py-1 bg-accent-100 text-accent-700 rounded-full text-xs">AWS</span>
+              <span class="px-2 py-1 bg-primary-100 text-primary-700 rounded-full text-xs">React</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fun Footer Element -->
+      <div class="text-center border-t border-gray-200 pt-8">
+        <div class="inline-flex items-center space-x-2 text-sm text-gray-500 mb-4">
+          <i class="fas fa-coffee animate-bounce-slow"></i>
+          <span>Powered by Coffee and Code</span>
+          <i class="fas fa-code animate-bounce-slow"></i>
+        </div>
+        
+        <!-- Copyright -->
+        <p class="text-sm text-gray-500">
+          © {new Date().getFullYear()} Bineeth. All bugs reserved. 
+          <span class="block sm:inline">Made with <i class="fas fa-heart text-red-500"></i> and lots of console.log()</span>
+        </p>
+
+        <!-- Easter Egg -->
+        <p class="text-xs text-gray-400 mt-2">
+          <i class="fas fa-bug"></i> Found a bug? Let's call it a feature!
+        </p>
+      </div>
+    </div>
+  </footer>
+</div>
+</htmlCode></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
